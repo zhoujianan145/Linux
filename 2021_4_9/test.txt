@@ -1,0 +1,79 @@
+
+test.o:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+0000000000000000 <main>:
+   0:	55                   	push   %rbp
+   1:	48 89 e5             	mov    %rsp,%rbp
+   4:	48 83 ec 10          	sub    $0x10,%rsp
+   8:	48 8d 45 f0          	lea    -0x10(%rbp),%rax
+   c:	be d0 07 00 00       	mov    $0x7d0,%esi
+  11:	48 89 c7             	mov    %rax,%rdi
+  14:	e8 00 00 00 00       	callq  19 <main+0x19>
+  19:	48 8d 45 f0          	lea    -0x10(%rbp),%rax
+  1d:	48 89 c7             	mov    %rax,%rdi
+  20:	e8 00 00 00 00       	callq  25 <main+0x25>
+  25:	b8 00 00 00 00       	mov    $0x0,%eax
+  2a:	c9                   	leaveq 
+  2b:	c3                   	retq   
+
+000000000000002c <_Z41__static_initialization_and_destruction_0ii>:
+  2c:	55                   	push   %rbp
+  2d:	48 89 e5             	mov    %rsp,%rbp
+  30:	48 83 ec 10          	sub    $0x10,%rsp
+  34:	89 7d fc             	mov    %edi,-0x4(%rbp)
+  37:	89 75 f8             	mov    %esi,-0x8(%rbp)
+  3a:	83 7d fc 01          	cmpl   $0x1,-0x4(%rbp)
+  3e:	75 27                	jne    67 <_Z41__static_initialization_and_destruction_0ii+0x3b>
+  40:	81 7d f8 ff ff 00 00 	cmpl   $0xffff,-0x8(%rbp)
+  47:	75 1e                	jne    67 <_Z41__static_initialization_and_destruction_0ii+0x3b>
+  49:	bf 00 00 00 00       	mov    $0x0,%edi
+  4e:	e8 00 00 00 00       	callq  53 <_Z41__static_initialization_and_destruction_0ii+0x27>
+  53:	ba 00 00 00 00       	mov    $0x0,%edx
+  58:	be 00 00 00 00       	mov    $0x0,%esi
+  5d:	bf 00 00 00 00       	mov    $0x0,%edi
+  62:	e8 00 00 00 00       	callq  67 <_Z41__static_initialization_and_destruction_0ii+0x3b>
+  67:	c9                   	leaveq 
+  68:	c3                   	retq   
+
+0000000000000069 <_GLOBAL__sub_I_main>:
+  69:	55                   	push   %rbp
+  6a:	48 89 e5             	mov    %rsp,%rbp
+  6d:	be ff ff 00 00       	mov    $0xffff,%esi
+  72:	bf 01 00 00 00       	mov    $0x1,%edi
+  77:	e8 b0 ff ff ff       	callq  2c <_Z41__static_initialization_and_destruction_0ii>
+  7c:	5d                   	pop    %rbp
+  7d:	c3                   	retq   
+
+Disassembly of section .text._ZN4DateC2Ei:
+
+0000000000000000 <_ZN4DateC1Ei>:
+   0:	55                   	push   %rbp
+   1:	48 89 e5             	mov    %rsp,%rbp
+   4:	48 89 7d f8          	mov    %rdi,-0x8(%rbp)
+   8:	89 75 f4             	mov    %esi,-0xc(%rbp)
+   b:	48 8b 45 f8          	mov    -0x8(%rbp),%rax
+   f:	8b 55 f4             	mov    -0xc(%rbp),%edx
+  12:	89 10                	mov    %edx,(%rax)
+  14:	5d                   	pop    %rbp
+  15:	c3                   	retq   
+
+Disassembly of section .text._ZN4Date5PrintEv:
+
+0000000000000000 <_ZN4Date5PrintEv>:
+   0:	55                   	push   %rbp
+   1:	48 89 e5             	mov    %rsp,%rbp
+   4:	48 83 ec 10          	sub    $0x10,%rsp
+   8:	48 89 7d f8          	mov    %rdi,-0x8(%rbp)
+   c:	48 8b 45 f8          	mov    -0x8(%rbp),%rax
+  10:	8b 00                	mov    (%rax),%eax
+  12:	89 c6                	mov    %eax,%esi
+  14:	bf 00 00 00 00       	mov    $0x0,%edi
+  19:	e8 00 00 00 00       	callq  1e <_ZN4Date5PrintEv+0x1e>
+  1e:	be 00 00 00 00       	mov    $0x0,%esi
+  23:	48 89 c7             	mov    %rax,%rdi
+  26:	e8 00 00 00 00       	callq  2b <_ZN4Date5PrintEv+0x2b>
+  2b:	c9                   	leaveq 
+  2c:	c3                   	retq   

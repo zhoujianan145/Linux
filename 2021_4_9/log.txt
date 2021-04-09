@@ -1,0 +1,10 @@
+log.txt
+makefile
+myshell
+myshell.c
+test
+test1
+test.cc
+test.o
+test.s
+test.txt
